@@ -4,41 +4,26 @@ namespace SchoolDemo.Model
 {
     public class Student
     {
-        private string name;
-        private string surname;
-        private int age;
-        private bool isAlive;
 
         public Student(string name, string surname, int age)
         {
-            this.name = name;
-            this.surname = surname;
-            this.age = age;
-            this.isAlive = true;
+            this.Name = name;
+            this.Surname = surname;
+            this.Age = age;
+            this.IsAlive = true;
         }
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        public string Name { get; set; }
+        public string Surname { get; set; }
 
-        public string Surname
-        {
-            get { return surname; }
-            set { surname = value; }
-        }
+        public int Age { get; set; }
 
-        public int Age
-        {
-            get { return age; }
-            set { age = value; }
-        }
+        public bool IsAlive { get; set; }
 
         public void Deactive()
         {
-            this.isAlive = false;
+            this.IsAlive = false;
         }
-        public bool Exist { get => isAlive; }
+        public bool Exist { get => IsAlive; }
     }
 }
